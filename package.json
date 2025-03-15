@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.21.2",
     "mongoos": "^0.0.1-security",
     "mongoose": "^8.12.1"
@@ -9,7 +10,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/UmeshpJadhav/REST-API/issues"
   },
-  "homepage": "https://github.com/UmeshpJadhav/REST-API#readme"
+  "homepage": "https://github.com/UmeshpJadhav/REST-API#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
