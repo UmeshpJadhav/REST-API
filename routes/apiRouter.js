@@ -3,28 +3,28 @@ const userModel = require("../models/user");
 const user = require("../models/user");
 const router = express.Router();
 
-// const users = [
-//     { _id : "1" , name: "Umesh" },
-//     { _id : "2" , name: "Jadhav"},
-// ];  
+const users = [
+    { _id : "1" , name: "Umesh" },
+    { _id : "2" , name: "Jadhav"},
+];  
 
 
-// router.get("/users", (req, res) => {
-//     res.json(users)
-// });
+router.get("/users", (req, res) => {
+    res.json(users)
+});
 
-// router.get("/users/:id" , (req, res)=> {
-//     let found = users.find((elem) => elem._id === req.params.id);
-//     if(!found) return res.json({ success: false , message : " user not found" })
-//      res.json(found);
-// })
+router.get("/users/:id" , (req, res)=> {
+    let found = users.find((elem) => elem._id === req.params.id);
+    if(!found) return res.json({ success: false , message : " user not found" })
+     res.json(found);
+})
 
-// router.post("/users/create", (req, res) => {
-//     let index = Math.floor(Math.random())
-//     users.push({ _id : index, name: req.body.name})
+router.post("/users/create", (req, res) => {
+    let index = Math.floor(Math.random())
+    users.push({ _id : index, name: req.body.name})
 
-//     res.json(users);
-// })
+    res.json(users);
+})
 
 
 router.get("/users", async (req, res) => {
