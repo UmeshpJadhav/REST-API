@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const apiRouter = require("./routes/apiRouter");
+const connectDB = require("./models/user");
+
+connectDB();
 
 
 

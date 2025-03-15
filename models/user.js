@@ -1,9 +1,14 @@
 const mongoose = require("mongoose");
 
-mongoose.coonnect('mongodb://127.0.0.1:27017/apidev');
+mongoose.connect("mongodb://127.0.0.1:27017/apidev", {
+    useNewUrlParser: true,
+    useUnifiedTopology : true
+  })
+    .then(() => console.log("Connected to MongoDB"))
+    .catch((err) => console.error("MongoDB Connection Error:", err));
 
 
-const userSchema = mongoose.schema({
+const userSchema = mongoose.Schema({
     name : String,
     username : String,
 
